@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/compact-circlet-221015/app-python-mage', '.']
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/app-python-mage', 'frontend=gcr.io/compact-circlet-221015/app-python-mage']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1'
+
+images:
+- 'gcr.io/$PROJECT_ID/quickstart-image'
