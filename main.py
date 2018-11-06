@@ -20,14 +20,14 @@ import json
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hola a todos los que me estan viendo!')
+        self.response.write('---> hola a todos los que me estan viendo!')
 
 class AdminPage(webapp2.RequestHandler):
     def get(self):
 	self.response.headers['Content-Type'] = 'application/json'   
 	obj = {
 	  'success': 'true',
-	  'mensaje': 'ahora estas en modo administrador'
+	  'mensaje': 'Ahora estas en modo administrador - preparate'
 	}
 	self.response.write(json.dumps(obj))
 
@@ -40,7 +40,7 @@ def main():
     import os
     from werkzeug.serving import run_simple
     from werkzeug.wsgi import SharedDataMiddleware
-    # Add handler for static files
+    # Add handler for static filesss
     app_with_static = SharedDataMiddleware(app, {
         '/static': os.path.join(os.path.dirname(__file__), 'static')
     })

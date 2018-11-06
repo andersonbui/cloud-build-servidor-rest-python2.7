@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-python
+  labels:
+    app: app-python
+spec:
+  template:
+    metadata:
+      labels:
+        app: app-python
+        tier: web
+    spec:
+      containers:
+      - name: app-python-image
+        image: gcr.io/compact-circlet-221015/app-python-image:latest
+        ports:
+        - containerPort: 8080
