@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "gcr.io/compact-circlet-221015/app-python-image:v1", "."]
+  args: ["build", "-t", "gcr.io/compact-circlet-221015/app-python-image:v1.1", "."]
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "gcr.io/compact-circlet-221015/app-python-image:v1"]
+  args: ["push", "gcr.io/compact-circlet-221015/app-python-image:v1.1"]
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['set','image','deployment/app-python-web','app-python-web=gcr.io/compact-circlet-221015/app-python-image:v1.1']
   env:
