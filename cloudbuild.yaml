@@ -1,4 +1,3 @@
-
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ["build", "-t", "gcr.io/compact-circlet-221015/app-python-image:latest", "."]
