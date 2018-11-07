@@ -4,12 +4,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ["push", "gcr.io/compact-circlet-221015/app-python-image:v1"]
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set','image','deployment/app-python-web','app-python-web=gcr.io/compact-circlet-221015/app-python-image:latest']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-f'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1'
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set','image','deployment/app-python-web','app-python-web=gcr.io/compact-circlet-221015/app-python-image:v1']
+  args: ['set','image','deployment/app-python-web','app-python-web=gcr.io/compact-circlet-221015/app-python-image:v1.1']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-f'
   - 'CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1'
