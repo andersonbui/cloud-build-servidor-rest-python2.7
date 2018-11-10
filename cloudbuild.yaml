@@ -9,7 +9,7 @@ steps:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-f'
   - 'CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1'
 substitutions:
-  _VERSION: v1.5
+  _VERSION: v1.6
   _PROJECT_ID: compact-circlet-221015
   _DOCKER_IMAGE: app-python-image
   _DEPLOYMENT_NAME: app-python-web
