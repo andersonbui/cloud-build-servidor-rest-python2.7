@@ -20,7 +20,7 @@ import json
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Esta es una prueba de actualizacion 1.6 - Hola a todos esta es la version uno.seis!')
+        self.response.write('Esta es una prueba de actualizacion 1.7 - Hola a todos esta es la version uno.siete!')
 
 class AdminPage(webapp2.RequestHandler):
     def get(self):
